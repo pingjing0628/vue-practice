@@ -22,7 +22,18 @@
 
     <h3>Event</h3>
     <a href="https://www.google.com.tw/" @click.prevent="prevent">google</a>
+  
+    <h3> Touch </h3>
+    <div @click="father">
+      <div @click="middle">
+        <a @click.self="child">BUTTON</a>
+      </div>
+    </div>
+
   </div>
+<!-- .capture 先觸發下的那層，後觸發子層 -->
+<!-- .self 只觸發event.target -->  
+<!-- .once 只在按下第一次的時候被觸發-->
 </template>
 
 <script>
@@ -38,6 +49,15 @@ export default {
   methods: {
       prevent() {
         alert('不會觸發連結')
+      }, 
+      father() {
+        alert('觸發父層')
+      },
+      middle() {
+        alert('觸發中層')
+      },
+      child() {
+        alert('觸發 event Target層')
       }
     }
 }
