@@ -12,6 +12,10 @@
           <h1>多插槽 Slot title</h1>
       </template>
     </SlotCard>
+
+    <h1>Draw</h1>
+    <input type="text" v-model.trim.lazy="myname">
+    <p>Drawer {{ myname }}</p>
   </div>
 </template>
 
@@ -22,7 +26,17 @@ export default {
   name: 'slot',
   components: {
     SlotCard
-  }
+  },
+  data() {
+      return {
+        myname:'Enter real name'
+      }
+    },
+    watch: {
+      myname() {
+        alert('祝您中獎！')
+      }
+    }
   
 }
 </script>

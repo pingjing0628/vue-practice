@@ -5,11 +5,11 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/card">Card</router-link> |
       <router-link to="/bread">Bread</router-link> |
-      <router-link to="/news">News</router-link> 
+      <router-link to="/news">News</router-link> |
+      <router-link to="/filter">Filter</router-link>
     </div>
     <Breadcrumb />
     <router-view/>
-    
   </div>
 </template>
 

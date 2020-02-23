@@ -91,6 +91,20 @@ export default new VueRouter({
           name: 'News'
         }]
       }
+    },
+    {
+      path: '/filter',
+      name: 'filter',
+      component: () => import('../views/Filter.vue'),
+      meta: {
+        breadcrumb: [{
+          name: 'Home',
+          link: '/'
+        },
+        {
+          name: 'Filter'
+        }]
+      }
     }
   ]
 })
