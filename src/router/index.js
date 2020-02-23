@@ -105,6 +105,20 @@ export default new VueRouter({
           name: 'Filter'
         }]
       }
+    },
+    {
+      path: '/menu',
+      name: 'menu',
+      component: () => import('../views/Menu.vue'),
+      meta: {
+        breadcrumb: [{
+          name: 'Home',
+          link: '/'
+        },
+        {
+          name: 'Menu'
+        }]
+      }
     }
   ]
 })
